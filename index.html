@@ -4,6 +4,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+
 <html>
 	<head>
 		<title>LDeLong.dev</title>
@@ -48,18 +49,19 @@
 							<article id="intro">
 								<h2 class="major">Intro</h2>
 								<span class="image main"><img src="images/welcome.png" alt="welcome image" /></span>
-								<p>Hi there! I'm Lauren, your go-to for all things front-end development. As a computer science student and a passionate software developer, 
+								<p>Hi there! I'm Lauren, your go-to for all things front-end software development, web design and user experience design. 
+									As a computer science student and a passionate developer, 
 									I spend my days (and more nights than I’d like to admit) immersed in code, creating magic on digital canvases. 
-									As a technology enthusiast and science geek I'm always on the lookout for innovative projects to collaborate on. 
-									You can check out some of my favorite projects <a href="#work">here</a>.<br/><br/>Thanks for visiting!</p>
+									As a technology enthusiast I'm always on the lookout for innovative projects to collaborate on. 
+									You can check out some of my favorite projects <a href="#work" style="font-weight: bold;">here</a>.<br/><br/>Thanks for visiting!</p>
 							</article>
 
 						<!-- Work -->
 							<article id="work">
 								<h2 class="major">Work</h2>
-								<span class="image main"><img src="images/office2.jpeg" alt="futuristic cityscape" /></span>
+								<span class="image main"><img src="images/desk.jpeg" alt="modern computer desk" /></span>
 								<p>Throughout my training I've had the opportunity to work on some fantastic projects, each presenting unique challenges and learning opportunities. Here are a few of my favorites:</p>
-								<a href='./work/'>Theme Park Site:</a><br/><p>An exciting tool for thrill enthusiasts. Filter worldwide theme parks and attractions based on your
+								<a href='https://thrilljunkies.us'>ThrillJunkies:</a><br/><p>An ongoing project that will be an exciting tool for thrill enthusiasts. Filter worldwide theme parks and attractions based on your
 									preferences, and save your favorites. Still under development with React, JSX, CSS, Bootstrap, and RESTful APIs.</p>
 								<p>Art Portfolio Site:<br/>A multi-page platform showcasing an artist's portfolio. It just so happens to belong to my talented daughter! Built with React, JavaScript, HTML, CSS, Bootstrap and REST.</p>	
 								<p>Tic-Tac-Toe:<br/>A classic game with a digital twist. This two-player Tic-Tac-Toe game is built with JavaScript, HTML, CSS, Bootstrap, jQuery, and AJAX.</p>
@@ -92,22 +94,23 @@
 							<article id="contact">
 								<div><br/></div>
 								<div id="success-page">
-									<form name="gform" id="gform" enctype="text/plain" method="post" action="https://docs.google.com/forms/d/e/1FAIpQLSckBCdoGIgftancEMficmwI5rgJkj5BElcGFnftMx1HYtRTuQ/formResponse?"
+									<script type="text/javascript">var submitted=false;</script>
+									<form name="gform" id="gform" enctype="text/plain" method="POST" action="https://formsubmit.co/laurenndelong@gmail.com"
 									target="hidden_iframe" onsubmit="submitted=true">
 									<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 									<h2 class="major">Contact</h2>
 										<div class="fields">
 											<div class="field half">
 												<label for="name">Name</label>
-												<input type="text" name="entry.1233462952" id="entry.1233462952" />
+												<input type="text" name="name" id="name" />
 											</div>
 											<div class="field half">
 												<label for="email">Email</label>
-												<input type="text" name="entry.821597610" id="entry.821597610" />
+												<input type="text" name="email" id="email" />
 											</div>
 											<div class="field">
 												<label for="message">Message</label>
-												<textarea name="entry.1075045845" id="entry.1075045845" rows="4"></textarea>
+												<textarea name="message" id="message" rows="4"></textarea>
 											</div>
 										</div>
 										<ul class="actions">
@@ -126,7 +129,6 @@
 							</article>
 							
 							<script src="assets/js/jquery.min.js"></script>
-							<script type="text/javascript">var submitted=false;</script>
 							<script type="text/javascript">							
 							$('#success-page').on('submit', function(e) {
 							$('#gform').fadeOut(2000);							
@@ -394,6 +396,33 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+			// Import the functions you need from the SDKs you need
+// import { initializeApp } from "firebase/app";
+// import { getAnalytics } from "firebase/analytics";
+// import { getMessaging } from "firebase/messaging";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// const firebaseConfig = {
+//   apiKey: "AIzaSyDDiCV5qkHc6ZLdJZl1EON7A0wsQZq36rA",
+//   authDomain: "ldelong-dev.firebaseapp.com",
+//   projectId: "ldelong-dev",
+//   storageBucket: "ldelong-dev.appspot.com",
+//   messagingSenderId: "387655380705",
+//   appId: "1:387655380705:web:e398faffe4479ca13b91a0",
+//   measurementId: "G-123JEGTBEG"
+// };
+
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
+
+// // Initialize Firebase Cloud Messaging and get a reference to the service
+// const messaging = getMessaging(app);
+// </script>
 
 	</body>
 </html>
