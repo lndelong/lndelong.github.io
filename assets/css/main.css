@@ -644,9 +644,8 @@ input, select, textarea {
 		position: relative;
 	}
 
-	#work {
+	#intro {
 		width: 40%;
-		text-align: center;
 	}
 
 		.image:before {
