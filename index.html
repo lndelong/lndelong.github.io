@@ -1,406 +1,62 @@
-<!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="..node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="p-3 mb-2 bg-transparent text-body">
 
-<html>
-	<head>
-		<title>LDeLong.dev</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+    <div class="container" id="board">
+        <div class="row text-center ">
+            <div class="col">
+                <h1 class="text-center">Tic-Tac-Toe</h1>
+            </div>
+        </div>
+        <table class="table-6 align-middle" vertical-align: middle>
+            <tbody>        
+                       <script>const O = <iframe src="https://drive.google.com/file/d/1daRIVhnpWiqw9uKS27v14uAv0iKUw1m3/preview" width="640" height="480" allow="autoplay"></iframe></script> 
+                <tr>
+                    <td class="cell" id="0" data-cell><img id="xImage" height="90px" style="display: none;" src="./images/x.gif" alt="animated gif of X">
+                        <img  id="oImage" height="90px" style="display: none;" src="./images/o.gif"></td>
+                    <td class="cell" id="1" data-cell><img id="xImage" height="90px" style="display:none;" src="./images/x.gif" alt="animated gif of X">
+                        <img id="oImage" height="90px" style="display: none;" src="./images/o.gif"></td>
+                    <td class="cell" id="2" data-cell><img id="xImage" height="90px" style="display:none;" src="./images/x.gif" alt="animated gif of X">
+                        <img id="oImage" height="90px" style="display: none;" src="./images/o.gif"></td>     
+                </tr>
+                <tr>
+                    <td class="cell" id="3" data-cell><img id="xImage" height="90px" style="display:none;" src="./images/x.gif" alt="animated gif of X">
+                        <img id="oImage" height="90px" style="display: none;" src="./images/o.gif"></td> 
+                    <td class="cell" id="4" data-cell><img id="xImage" height="90px" style="display:none;" src="./images/x.gif" alt="animated gif of X">
+                        <img id="oImage" height="90px" style="display: none;" src="./images/o.gif"></td>
+                    <td class="cell" id="5" data-cell><img id="xImage" height="90px" style="display:none;" src="./images/x.gif" alt="animated gif of X">
+                        <img id="oImage" height="90px" style="display: none;" src="./images/o.gif"></td>                   
+                </tr>
+                <tr>
+                    <td class="cell border-bottom-0" id="6" data-cell><img id="xImage" height="90px" style="display:none;" src="./images/x.gif" alt="animated gif of X">
+                        <img id="oImage" height="90px" style="display: none;" src="./images/o.gif"></td>
+                    <td class="cell border-bottom-0" id="7" data-cell><img id="xImage" height="90px" style="display:none;" src="./images/x.gif" alt="animated gif of X">
+                        <img id="oImage" height="90px" style="display: none;" src="./images/o.gif"></td>
+                    <td class="cell border-bottom-0" id="8" data-cell><img id="xImage" height="90px" style="display:none;" src="./images/x.gif" alt="animated gif of X">
+                        <img id="oImage" height="90px" style="display: none;" src="./images/o.gif"></td>                   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col"><br><br>
+            <button class="m-20" id="restartButton">Restart</button><br><br>
+            <div class="winningMessage show" id="winningMessage">
+                <div id="winningMessageText"></div>             
+            </div>
+        </div>
+    </div>
+    </div>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="test.js"></script>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<img src="./images/ld2.png" class="logo-icon" ></img>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Lauren DeLong</h1>
-								<p>Hi, I'm Lauren, a Front-End Software Developer and Computer Science student with a passion for science and 
-									technology. Welcome, let's build!
-								</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#work">Work</a></li>
-								<li><a href="#about">About</a></li>
-								<li><a href="#" onclick="window.open('https://www.flowcode.com/page/lndelong', '_blank');">Contact</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main" id="intro"><img src="images/headshot.png" alt="welcome image"/></span>
-								<p>Hi there! I'm Lauren, your go-to for all things front-end software development, web design and user experience design. 
-									As a student and a passionate developer, 
-									I spend my days (and more nights than I’d like to admit) immersed in code, creating magic on digital canvases. 
-									As a technology enthusiast I'm always on the lookout for innovative projects to collaborate on. 
-									You can check out some of my favorite projects <a href="#work" style="font-weight: bold;">here</a>.<br/><br/>Thanks for visiting!</p>
-							</article>
-
-						<!-- Work -->
-							<article id="work">
-								<h2 class="major">Work</h2>
-								<span class="image main"><img src="images/homeoffice.jpeg" alt="home office" /></span>
-								<p>Throughout my training I've had the opportunity to work on some fantastic projects, each presenting unique challenges and learning opportunities. Here are a few of my favorites:</p>
-								<h3 style="margin: 0"><a href="#work" onclick="window.open('https://thrilljunkies.us', '_blank');">ThrillJunkies</a></h3><p>An ongoing project that will be an exciting tool for thrill enthusiasts. Filter worldwide theme parks and attractions based on your
-									preferences, and save your favorites. Still under development with React, JSX, CSS, Bootstrap, and RESTful APIs.</p>
-								<h3 style="margin: 0"><a href="#work" onclick="window.open('work/Tic-Tac-Toe/index.html', '_blank');">Tic-Tac-Toe</a></h3><p>A classic game with a digital twist. This two-player Tic-Tac-Toe game is built with JavaScript, HTML, CSS, Bootstrap, jQuery, and AJAX.</p>
-								<h3 style="margin: 0"><a href="#work" onclick="window.open('https://www.upwork.com/freelancers/~012157da8dd284fe4d?s=1044578476142100494', '_blank')">UpWork</a></h3><p>My freelance profile features a few of my recent web design samples.</p>
-								<h3>More coming soon!</h3>
-									<!-- <p>Art Portfolio Site:<br/>A multi-page platform showcasing an artist's portfolio. It just so happens to belong to my talented daughter! Built with React, JavaScript, HTML, CSS, Bootstrap and REST.</p>	
-								<p>Movie Review Site:<br/>A movie review website simulation that enables users to rate and review movies. Crafted with React, JSX, CSS, Bootstrap, and REST.</p> -->
-							</article>
-
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
-								<span class="image main" ><img src="images/vegas.jpeg" alt="vegas skyline" /></span>
-								<p> My journey has brought me to the entertainment capital of the world, Las Vegas, Nevada, where I'm currently pursuing my Bachelors in 
-									Computer Science from WGU. Earlier this year I dove head first into Front End Software Development by participating in a six month online Bootcamp at the College of Southern Nevada, 
-									and graduating with a 99.45% overall grade. This incredible experience has allowed me to put my strong problem solving skills to work creating responsive websites that are as functional 
-									as they are aesthetically pleasing.</p>
-									<p>So far I’ve worn many hats in my career - from Sales Leadership, to Account Executive, to Technical Recruiter - and now launching my career as a Software Developer.
-										But the journey has just begun! I’m a lifelong learner, and I bring that curiosity to my work. I love challenging myself and solving complex problems. I've been praised 
-										for my ability to collaborate with cross-functional teams, adapt to change, and communicate effectively. This eclectic mix of experiences and an immense desire to 
-										learn and grow make me a dynamic addition to any tech team.
-                                    	In the realm of front-end development, I bring more than just coding skills. I bring a unique perspective, an insatiable curiosity, and just a pinch of sarcasm, making my work more than just a job. 
-										It's a passion, an adventure, a quest that I'm excited to embark upon each and every day.</p>
-									<p>While I’m presently looking to break into my first full-time development gig,
-										 I'm available for freelance, contract work, and internships. I’m also always open to connecting with like-minded professionals and innovators, so let's build, grow, and pioneer together!</p>
-										 
-									
-							</article>
-
-						<!-- Contact -->
-						<!-- <div id="ff-compose"></div> -->
-<!-- <script async defer src="https://formfacade.com/include/102553383418954668153/form/1FAIpQLSckBCdoGIgftancEMficmwI5rgJkj5BElcGFnftMx1HYtRTuQ/classic.js?div=ff-compose"></script> -->
-							 <article id="contact">
-								
-								<!-- <div><br/></div> -->
-								<!-- <div id="success-page">
-									<script type="text/javascript">var submitted=false;</script>
-									<form name="gform" id="gform" enctype="multipart/form-data" method="POST" action="https://formsubmit.co/a5502fdab60605fe7267075ddbf1f912 "
-									target="hidden_iframe" onsubmit="submitted=true">
-									<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-									<h2 class="major">Contact</h2>
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="4"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Submit" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>								
-								</div>
-							<div > -->
-								<!-- <ul class="icons">
-									<li><a href="https://www.linkedin.com/in/laurenndelong" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://www.github.com/lndelong" class="icon brands fa-github"><span class="label">GitHub</span></a></li>	
-								</ul> -->
-					 
-								
-							</div>
-							
-							</article>
-<!-- 							
-							<script src="assets/js/jquery.min.js"></script>
-							<script type="text/javascript">							
-							$('#success-page').on('submit', function(e) {
-							$('#gform').fadeOut(2000);							
-							$('#contact').prepend("Your message was sent.");
-							});
-							</script> -->
-
-						<!-- Elements -->
-							<!-- <article id="elements">
-								<h2 class="major">Elements</h2>
-
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
-
-								<section>
-									<h3 class="major">Lists</h3>
-
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
-
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
-
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
-
-							</article>
-
-					</div> -->
-
-				<!-- Footer -->
-					<footer id="footer">
-						<!-- <p class="copyright">&copy; Dimension. Design: <a href="https://html5up.net">HTML5 UP</a>.</p> -->
-					</footer>
-
-			</div>
-
-		<!-- BG -->
-			<div id="bg"></div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
